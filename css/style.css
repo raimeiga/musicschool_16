@@ -1,24 +1,53 @@
-.content div {
+@charset "UTF-8";
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  word-break: break-all;
+  font-size: 10px;
+}
+@media (min-width: 768px) and (max-width: 940px) {
+  html {
+    font-size: 1.0638297872vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 2.6666666667vw;
+  }
+}
+
+body {
+  font-family: "Yu Gothic", "游ゴシック", "YuGothic", "游ゴシック体", "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.8333333333;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding-top: 8rem;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    padding-top: 5rem;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
   width: 100%;
+  height: auto;
+  display: block;
 }
-.content div h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #dc143c;
+
+@media (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
 }
-.content div p {
-  font-size: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.content-img-area {
-  width: 100%;
-  background: rgba(220, 20, 60, 0.2);
+@media (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
 }/*# sourceMappingURL=style.css.map */

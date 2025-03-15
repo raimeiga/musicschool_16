@@ -7,13 +7,17 @@ $color-red: #bc0000;
 }
 
 // $pixelSizeにfont-sizeの拡大最大値を入れると、その値以上に拡大しない
-// この関数だと、width:940px;のときに$pixelSizeが10pxとか22pxとかって代入の仕方になる
+// 例）hvw(18);と書く場合、
+// 画面幅940px以内なら、font-sizeは18/1080 の比率で可変するが、
+// width:940px以上になるとfont-sizeは18px以上にならない
 @function hvw($pixelSize) {
  @return min(calc($pixelSize / 940 * 100vw), $pixelSize * 1px);
 }
 
 // $pixelSizeにfont-sizeの拡大最大値を入れると、その値以上に拡大しない
-// この関数だと、width:1080px;のときに$pixelSizeが10pxとか22pxとかって代入の仕方になる
+// 例）hvw1080(18);と書く場合、
+// 画面幅1080px以内なら、font-sizeは18/1080 の比率で可変するが、
+// width:1080px以上になるとfont-sizeは18px以上にならない
 @function hvw1080($pixelSize) {
  @return min(calc($pixelSize / 1080 * 100vw), $pixelSize * 1px);
 }
